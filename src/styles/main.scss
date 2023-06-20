@@ -1,0 +1,87 @@
+@use 'variables';
+@use 'header';
+@use 'content';
+@use 'tabs';
+@use 'footer';
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
+.text--small--w {
+    font-size: 12px;
+    color: variables.$white;
+    text-decoration: none;
+}
+
+.text--w {
+    font-size: 15px;
+    color: variables.$white;
+    text-decoration: none;
+}
+
+.text--big--w {
+    font-size: 20px;
+    color: variables.$white;
+    text-decoration: none;
+}
+
+.text--bigg--w {
+    font-size: 24px;
+    color: variables.$white;
+    text-decoration: none;
+}
+
+.text--small--g {
+    font-size: 12px;
+    color: variables.$gray;
+    text-decoration: none;
+}
+
+.text--g {
+    font-size: 15px;
+    color: variables.$gray;
+    text-decoration: none;
+}
+
+body {
+    background-color: variables.$bgColor;
+    font-family: Avenir, sans-serif;
+    margin: 0;
+
+    .bg {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+
+        &__img {
+            background: url(../img/gf_bg.jpg);
+            opacity: 0.8;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            top: 0;
+            transition: opacity 1s ease;
+
+            &--darkend {
+                opacity: 0.3;
+                transition: opacity 1s ease;
+            }
+        }
+    }
+
+    .container {
+        position: relative;
+    }
+
+    
+}

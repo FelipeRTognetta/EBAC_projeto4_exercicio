@@ -1,0 +1,127 @@
+@use 'variables';
+
+.tabs {
+    padding: 0 75px;
+
+    &__nav {
+        margin-bottom: 10px;
+
+        &__button {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            line-height: 1.4;
+            color: variables.$gray;
+            text-decoration: none;
+            text-transform: uppercase;
+            background: none;
+            border: none;
+            border-bottom: 4px solid transparent;
+            padding-bottom: 15px;
+            cursor: pointer;
+            margin: 1vw 40px 0 0;
+
+            &--active {
+                border-color: variables.$gray;
+            }
+        }
+    }
+
+    &__divider {
+        border: none;
+        border-top: 2px solid rgba(variables.$gray, 0.2);
+    }
+
+    .tab {
+        display: none;
+
+        &--active{
+            display: block;
+        }
+
+        .season {
+            &__button {
+                padding: 10px 10px 10px 0;
+                font-size: 15px;
+                font-weight: 300;
+                letter-spacing: -.1px;
+                line-height: 1.4;
+                color: variables.$gray;
+                background: none;
+                border: none;
+                cursor: pointer;
+
+                &--active {
+                    font-weight: 700;
+                    color: variables.$white;
+                }
+            }
+        }
+
+        .episodes {
+            display: none;
+            margin: 0;
+            padding: 0;
+
+            &--active {
+                display: flex;
+            }
+
+            &__item {
+                width: 288px;
+                padding-right: 10px;
+
+                &__img {
+                    max-width: 100%;
+                    border-radius: 4px;
+                }
+                
+                &__title {
+                    padding-bottom: 6px;
+                    font-weight: 700;
+                }
+    
+                &__text {
+                    max-width: 270px;
+                }
+            }
+        }
+
+        .sugestions {
+            display: flex;
+            padding: 0;
+            &__item {
+                width: 288px;
+                margin-right: 10px;
+
+                img {
+                    border-radius: 4px;
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .details {
+            &__div {
+                display: flex;
+                &__text {
+                    max-width: 50%;
+                    letter-spacing: -.1px;
+                    padding-top: 24px;
+                }
+                &__infos {
+                    display: flex;
+                    padding-left: 12px;
+                    &__list {
+                        &__item {
+                            padding-bottom: 8px;
+                            img {
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

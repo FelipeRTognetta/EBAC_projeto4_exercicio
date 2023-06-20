@@ -1,0 +1,97 @@
+@use 'variables';
+
+.content { 
+    display: block;
+    padding: 0 75px;
+
+    &__img {
+        max-width: 341px;
+        padding: 56px 0 16px;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+
+        &__img {
+            height: 20px;
+            margin-right: 4px;
+        }
+    }
+
+    &__buttons {
+        align-items: center;
+        display: flex;
+        margin: 32px 0 0;
+
+        &__play {
+            padding: 12px 24px;
+            color: variables.$bgColor;
+            background-color: variables.$white;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            align-items: center;
+            display: flex;
+            margin: 4px 16px 4px 0;
+
+            &:hover {
+                cursor: pointer;
+                background-color: variables.$gray;
+            }
+
+            span {
+                margin-left: 12px;
+            }
+
+            img {
+                height: 36px;
+            }
+        }
+
+        &__round {
+            border-radius: 50%;
+            background-color: variables.$bgColor;
+            border: 2px solid variables.$white;
+            width: 40px;
+            height: 40px;
+            color: variables.$white;
+            align-items: center;
+            margin-right: 16px;
+            padding: 0;
+
+            &__plus {
+                fill: variables.$white;
+            }
+
+            &__group {
+                fill: variables.$white;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: variables.$white;
+
+                .content__buttons__round__group {
+                    fill: variables.$bgColor;
+                }
+
+                .content__buttons__round__plus {
+                    fill: variables.$bgColor;
+                }
+
+            }
+        }
+    }
+
+    &__text {
+        letter-spacing: -.1px;
+        padding: 16px 0;
+        max-width: 874px;
+        line-height: 1.4;
+    }
+}
