@@ -1,10 +1,15 @@
 @use 'variables';
 
 .tabs {
-    padding: 0 75px;
+    padding: 0 calc(3.5vw + 24px);
 
     &__nav {
         margin-bottom: 10px;
+        
+        @media (max-width: 768px) {
+            white-space: nowrap;
+            overflow-x: scroll;
+        }
 
         &__button {
             font-size: 20px;
@@ -20,6 +25,12 @@
             padding-bottom: 15px;
             cursor: pointer;
             margin: 1vw 40px 0 0;
+
+            @media (max-width: 768px) {
+                font-size: 18px;
+                margin: 1vw 10px 0 0;
+                padding-bottom: 5px;
+            }
 
             &--active {
                 border-color: variables.$gray;
@@ -63,6 +74,11 @@
             margin: 0;
             padding: 0;
 
+            @media (max-width: 1024px) {
+                white-space: nowrap;
+                overflow-x: scroll;
+            }
+
             &--active {
                 display: flex;
             }
@@ -70,6 +86,10 @@
             &__item {
                 width: 288px;
                 padding-right: 10px;
+
+                @media (max-width: 1024px) {
+                    width: 160px;
+                }
 
                 &__img {
                     max-width: 100%;
@@ -79,42 +99,81 @@
                 &__title {
                     padding-bottom: 6px;
                     font-weight: 700;
+                    margin: 10px 0;
                 }
     
                 &__text {
                     max-width: 270px;
+                    margin: 10px 0 0 0;
+                    white-space: pre-wrap;
                 }
             }
         }
 
         .sugestions {
             display: flex;
-            padding: 0;
+            padding-left: 0;
+            @media (max-width: 1024px) {
+                white-space: nowrap;
+                overflow-x: scroll;
+            }
+
             &__item {
                 width: 288px;
                 margin-right: 10px;
-
+                
                 img {
                     border-radius: 4px;
-                    max-width: 100%;
+                    width: 280px;
+
+                    @media (max-width: 1024px) {
+                        width: 160px;
+                    }
                 }
             }
         }
 
         .details {
+            @media (max-width: 768px) {
+                display: block;
+            }
+
             &__div {
+                @media (max-width: 768px) {
+                    display: block;
+                }
+
                 display: flex;
                 &__text {
                     max-width: 50%;
                     letter-spacing: -.1px;
                     padding-top: 24px;
+
+                    @media (max-width: 768px) {
+                        max-width: 100%;
+                    }
+                    
                 }
                 &__infos {
                     display: flex;
-                    padding-left: 12px;
+
+                    @media (max-width: 768px) {
+                        margin: 0;
+                    }
+
                     &__list {
+                        margin-left: 20px;
+                        padding: 0;
+
+                        @media (max-width: 768px) {
+                            margin-right: 20px;
+                            margin-left: 0;
+                        }
                         &__item {
-                            padding-bottom: 8px;
+                            margin-bottom: 8px;
+                            p {
+                                margin: 0;
+                            }
                             img {
                                 height: 20px;
                             }

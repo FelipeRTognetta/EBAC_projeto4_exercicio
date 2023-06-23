@@ -2,11 +2,14 @@
 
 .content { 
     display: block;
-    padding: 0 75px;
+    padding: 0 calc(3.5vw + 24px);
 
     &__img {
         max-width: 341px;
+        min-width: 100px;
+        width: 35vw;
         padding: 56px 0 16px;
+
     }
 
     &__rating {
